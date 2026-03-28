@@ -1,43 +1,101 @@
 # DFT Calculations for Copper (Cu) using Quantum ESPRESSO
 
-This repository contains Density Functional Theory (DFT) calculations for bulk Copper (Cu) performed using the Quantum ESPRESSO suite. The goal is to keep the workflow **reproducible**: input files used to run calculations, final outputs that validate results, and structure files that can be visualized.
+## 📌 Overview
+
+This project performs **Density Functional Theory (DFT)** calculations for bulk Copper (Cu) using the **Quantum ESPRESSO** simulation suite.
+The objective is to study the electronic structure and validate computational results through reproducible workflows.
 
 ---
 
-## Overview
-This project demonstrates a standard DFT workflow for a metallic system:
-- Preparing Quantum ESPRESSO input files
-- Running **relaxation** calculations 
-- Extracting final values such as optimized geometry and total energy
-- Visualizing the resulting structure using common tools
+## ⚛️ What is DFT?
+
+Density Functional Theory (DFT) is a quantum mechanical modeling method used to investigate the electronic structure of materials.
 
 ---
 
-## Software and Method
-- **Code:** Quantum ESPRESSO (`pw.x`)
-- **Method:** Plane-wave pseudopotential DFT
-- **Exchange–correlation:** LDA (as used in the provided inputs)
-- **System:** Bulk Copper (Cu)
+## 🎯 Objectives
+
+* Perform DFT simulations for bulk Copper (Cu)
+* Analyze structural and electronic properties
+* Maintain a reproducible workflow for simulations
+* Store input, output, and structure files systematically
 
 ---
 
-## What’s Included
-- QE input files (`.in`) used for calculations
-- QE output files (`.out`) from successful runs
-- A structure file (`.xsf`) for direct visualization in XCrySDen/VESTA
+## 📂 Project Structure
+
+```
+├── input/          # Input files for Quantum ESPRESSO simulations
+├── output/         # Output results from DFT calculations
+├── structures/     # Crystal structure files (Cu lattice)
+├── README.md
+```
 
 ---
 
-## Repository Structure
-- `inputs/` – Quantum ESPRESSO input files (`.in`) used to run calculations  
-- `outputs/` – Output files (`.out`) from successful QE runs (final/clean runs only)  
-- `structures/` – Structure/geometry files for visualization (e.g., `.xsf`)  
-- `plots/` – Post-processing or visualization data (optional)  
+## 🛠️ Tools & Technologies
+
+* Quantum ESPRESSO
+* Density Functional Theory (DFT)
+* Python (optional for post-processing)
+* Linux/Unix environment
 
 ---
 
-## How to Run (Quantum ESPRESSO)
+## ⚙️ Prerequisites
+
+* Quantum ESPRESSO installed
+* Basic knowledge of DFT and solid-state physics
+* Linux terminal familiarity
+
+---
+
+## 🚀 How to Run
+
+### 1. Navigate to input directory
 
 ```bash
-pw.x < inputs/cu_lda.relax.in > outputs/cu_lda.relax.out
+cd input
+```
 
+### 2. Run Quantum ESPRESSO calculation
+
+```bash
+pw.x < input_file.in > output_file.out
+```
+
+### 3. Check results
+
+Outputs will be generated in the `output/` folder.
+
+---
+
+## 📊 Key Outputs
+
+* Total energy of the system
+* Convergence behavior
+* Electronic structure properties
+* Optimized lattice parameters
+
+---
+
+## 🔍 Key Learnings
+
+* Understanding of DFT workflow using Quantum ESPRESSO
+* Handling input/output files for simulations
+* Interpreting computational material science results
+
+---
+
+## 💡 Future Improvements
+
+* Band structure and DOS (Density of States) analysis
+* Visualization using tools like VESTA
+* Automating workflows using Python scripts
+* Extending to other materials
+
+---
+
+## 📬 Author
+
+Kerat Panwar
